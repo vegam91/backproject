@@ -1,27 +1,45 @@
 const express = require('express')
-const User= require('./models/user')
-const List = require ('./models/list')
+require('dotenv').config()
+// const User= require('./models/user')
+// const List = require ('./models/list')
 const app = express()
-const mongoose = require('mongoose');
-app.use(express.json())
-mongoose.connect('mongodb://127.0.0.1:27017/music')
 
-app.get('/ping', (req, res) => {
-	res.json({pong: true})
-}) 
+
+
+
+
+require('./startup/db')()
+require('./startup/routes')(app)
+
+ 
 // endpoints user 
-app.post('/singin', async (req,res) =>{
+
+// 1.Registrar User
+// app.post('/singup', async (req,res) =>{
   
-    const newUser= await User.create(req.body)
-    res.json(newUser);
+//     const newUser= await User.create(req.body)
+//     res.json(newUser);
 
-});
+// });
 
-app.post('/createlist', async (req,res) => {
-const newList =  await List.create(req.body)
-res.json(newList)
+// //2. Acceso cuenta 
+// app.post('singin', async (req,res))  
 
-})
+// // Endpoints lista 
 
+// app.post('/list', async (req,res) => {
+// const newList =  await List.create(req.body)
+// // const listname = await List.find(req.body)
+// // User.listName.push()
+// res.json(newList)
+// })
+
+// // 3.Editar lista 
+// app.put('/list/:id', async (req,res) =>{
+// const updateList = await List.findByIdAndUpdate(req.params.id,
+//     {$set:req.body},
+// 		{new:true})
+// res.json(updateList)
+// })
 
 app.listen(3000, () => console.log('Server on...'))
