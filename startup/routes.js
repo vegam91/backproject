@@ -1,36 +1,14 @@
-const express = require ('express')
-const {param, body} = require ('express-validator')
-const UserControllers = require('../controllers/user')
-const validate = require('../middlewares/validate')
-const userValidationSchemaByBody = [
-	body('username')
-		.notEmpty()
-		.withMessage('El nombre de usuario no puede estar vacío')
-		.isString()
-		.withMessage('Debe proporcionar un nombre de usuario en texto'),
-	body('password')
-		.notEmpty()
-		.withMessage('La password no puede estar vacía')
-		.isString()
-		.withMessage('Debe proporcionar un password en texto'),
-]
+const express = require('express')
+require('dotenv').config()
+const app = express()
 
-const router = express.Router()
+module.exports = function(app){
 
-router.post(
-	'/signup',
-	userValidationSchemaByBody,
-	validate,
-	UserControllers.register
-)
+	app.use('./api/users', require('../routes/user'))
+app.use('api/lists', require('../routes/lists'))
 
-router.post(
-	'/signin',
-	userValidationSchemaByBody,
-	validate,
-	UserControllers.login
-)
+}
 
 
 
-module.exports= router 
+ 

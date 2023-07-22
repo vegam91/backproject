@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema( {
 
     isAdmin : Boolean,
     userlists:[{type: String, 
-        ref:'listName'}]
+        ref:'List'}]
     })
 
     UserSchema.methods.generateJWT = function () {
