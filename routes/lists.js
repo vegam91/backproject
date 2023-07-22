@@ -8,7 +8,7 @@ const isAuth = require('../middlewares/isAuth');
 const idValidationSchemaByBody = body('id').isMongoId().withMessage('Id invalida');
 const idValidationSchemaByParams = param('id').isMongoId().withMessage('Id invalida');
 
-idValidationSchemaByParams
+// idValidationSchemaByParams
 router.post('/', isAuth, ListControllers.createList);
 
 router.put('/:listId/song/:songId', isAuth, ListControllers.addSongToList);

@@ -19,7 +19,7 @@ const createList = async (req, res) => {
 
   const addSongToList = async (req, res) => {
     try {
-      const listId = req.params.listId;
+      const listId = req.body.listId;
       const songId = req.params.songId;
       const list = await List.findByIdAndUpdate(listId, { $push: { songId: songId } }, { new: true });
       if (!list) {
