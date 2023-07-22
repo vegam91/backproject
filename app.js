@@ -3,13 +3,13 @@ require('dotenv').config()
 // const User= require('./models/user')
 // const List = require ('./models/list')
 const app = express()
+const userRoutes = require ('./routes/user')
+const listRoutes = require ('./routes/lists')
 
-
-
-
+app.use('./api/users', userRoutes)
+app.use('api/lists', listRoutes)
 
 require('./startup/db')()
-require('./startup/routes')(app)
 
  
 // endpoints user 

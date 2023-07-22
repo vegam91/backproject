@@ -1,18 +1,36 @@
-// require('express-async-errors')
-const {json} = require('express')
-// const errors = require('../middlewares/errors')
+const express = require ('express')
+const {param, body} = require ('express-validator')
+const UserControllers = require('../controllers/user')
+const validate = require('../middlewares/validate')
+const userValidationSchemaByBody = [
+	body('username')
+		.notEmpty()
+		.withMessage('El nombre de usuario no puede estar vacío')
+		.isString()
+		.withMessage('Debe proporcionar un nombre de usuario en texto'),
+	body('password')
+		.notEmpty()
+		.withMessage('La password no puede estar vacía')
+		.isString()
+		.withMessage('Debe proporcionar un password en texto'),
+]
 
-module.exports = function (app) {
-	app.use(json())
-	// app.use(morgan('tiny'))
+const router = express.Router()
 
-	// app.use('/api/todos', require('../routes/todos'))
-	// app.use('/api/lists', require('../routes/lists'))
-	app.use('/api/users', require('../routes/user'))
+router.post(
+	'/signup',
+	userValidationSchemaByBody,
+	validate,
+	UserControllers.register
+)
 
-	app.get('/ping', (req, res) => {
-		res.json('pong')
-	})
+router.post(
+	'/signin',
+	userValidationSchemaByBody,
+	validate,
+	UserControllers.login
+)
 
-	// app.use(errors)
-}
+
+
+module.exports= router 

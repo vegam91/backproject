@@ -2,6 +2,7 @@ const express = require ('express')
 const {param, body} = require ('express-validator')
 const UserControllers = require('../controllers/user')
 const validate = require('../middlewares/validate')
+
 const userValidationSchemaByBody = [
 	body('username')
 		.notEmpty()
@@ -31,7 +32,9 @@ router.post(
 	UserControllers.login
 )
 
-router.get('/profile/:id',)
+router.get
+('/profile/:id',
+UserControllers.getUserProfile);
 
 
 module.exports= router 
