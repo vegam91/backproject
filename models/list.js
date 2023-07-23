@@ -6,7 +6,8 @@ const ListSchema = new mongoose.Schema( {
      public: Boolean,
     owner: {type:String, ref : 'username'}
        })
-
+       
+       
     const List = mongoose.model('List', ListSchema)
 
 module.exports= List

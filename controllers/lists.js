@@ -1,4 +1,5 @@
 const List = require('../models/list');
+const User = require('../models/user')
 
 const createList = async (req, res) => {
     try {
@@ -19,8 +20,8 @@ const createList = async (req, res) => {
 
   const addSongToList = async (req, res) => {
     try {
-      const listId = req.body.listId;
-      const songId = req.params.songId;
+      const listId = req.param.listId;
+      const songId = req.param.songId;
       const list = await List.findByIdAndUpdate(listId, { $push: { songId: songId } }, { new: true });
       if (!list) {
         return res.status(404).json({ message: "Lista no encontrada" });
