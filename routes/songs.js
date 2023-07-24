@@ -25,7 +25,7 @@ const ValidationSchemaByParam = [
  const deleteValidationSchemaByParam = [
 			param('id').notEmpty().withMessage('El ID no puede estar vacío').isMongoId().withMessage('ID inválido'),
 		  ];
-router.put('/songs/:id', isAuth, isAdmin, ValidationSchemaByParam, ValidationSchemaByBody, validate, songController.updateSong);
+router.put('/:id', isAuth, isAdmin, ValidationSchemaByParam, ValidationSchemaByBody, validate, songController.updateSong);
 
 router.post('/', isAuth, isAdmin,ValidationSchemaByBody, validate, songController.addSong);
 
