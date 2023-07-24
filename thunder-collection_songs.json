@@ -1,0 +1,96 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "songs",
+    "dateExported": "2023-07-24T18:05:09.400Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "6c1153ef-2077-4a43-a3f1-f6a044751031",
+            "colId": "83f5e638-6a26-490a-b0be-1794087eced6",
+            "containerId": "",
+            "name": "addSong ",
+            "url": "localhost:3000/api/songs",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-23T14:34:57.461Z",
+            "modified": "2023-07-24T17:35:03.891Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGJkNWVmNDdjZDVlNTcyMGQ0NjQyOGEiLCJ1c2VybmFtZSI6IlNlcmdpbyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5MDE3ODg3OX0.8zeEKIavXlPoNA3aWSCqIIs6PZtM6Nh9z7jeUaeFKHw "
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"songName\" : \"cancion10\",\n  \"Author\" : \"artista2\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1ada7fde-38b6-449d-af7c-0de0e99ce4f9",
+            "colId": "83f5e638-6a26-490a-b0be-1794087eced6",
+            "containerId": "",
+            "name": "updateSong",
+            "url": "localhost:3000/api/songs/64be5104abdec202035f5d87",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2023-07-23T14:43:47.155Z",
+            "modified": "2023-07-24T17:43:01.413Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGJkNWVmNDdjZDVlNTcyMGQ0NjQyOGEiLCJ1c2VybmFtZSI6IlNlcmdpbyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5MDE5Mjk4Nn0.gUWxg1zgXReH7qz7u04MGW8kTHWGf4c57E0e7oVomw4 "
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"songName\": \"cancion7\",\n  \"Author\": \"autor2\"\n\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a4fefbe0-6006-4017-9ad5-9261c3cd7b0a",
+            "colId": "83f5e638-6a26-490a-b0be-1794087eced6",
+            "containerId": "",
+            "name": "deleteSOng",
+            "url": "localhost:3000/api/songs/64be50feabdec202035f5d85",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-07-23T14:50:28.315Z",
+            "modified": "2023-07-24T10:35:07.641Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGJkNWVmNDdjZDVlNTcyMGQ0NjQyOGEiLCJ1c2VybmFtZSI6IlNlcmdpbyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5MDE3ODg3OX0.8zeEKIavXlPoNA3aWSCqIIs6PZtM6Nh9z7jeUaeFKHw "
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a322de13-cb6f-40af-a793-9fc7bec4d65a",
+            "colId": "83f5e638-6a26-490a-b0be-1794087eced6",
+            "containerId": "",
+            "name": "songByAuthor",
+            "url": "localhost:3000/api/songs/?artista2",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-07-24T17:34:25.719Z",
+            "modified": "2023-07-24T17:36:22.134Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "artista2",
+                    "value": "",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "users",
+    "dateExported": "2023-07-24T18:04:51.600Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1f2bea84-ba84-49d8-a75c-870bfeb2aa54",
+            "colId": "2ed6a83d-8f53-48b2-b620-d66f3fdf3d4a",
+            "containerId": "",
+            "name": "/singup",
+            "url": "/signup",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-07-19T10:57:06.926Z",
+            "modified": "2023-07-24T17:54:26.143Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"username\" : \"Daniel\", \n    \"password\": \"mellamojavi\",\n    \"isAdmin\":  true \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "316c6ed7-2808-40e7-8525-ba7ad7f0aa8c",
+            "colId": "2ed6a83d-8f53-48b2-b620-d66f3fdf3d4a",
+            "containerId": "",
+            "name": "signin",
+            "url": "/signin",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-07-20T12:23:33.621Z",
+            "modified": "2023-07-24T17:54:43.790Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"Daniel\",\n  \"password\": \"mellamojavi\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a1a61b77-7149-4790-8f44-3a0198de135c",
+            "colId": "2ed6a83d-8f53-48b2-b620-d66f3fdf3d4a",
+            "containerId": "",
+            "name": "getprofiles",
+            "url": "/profile/64bd5169515a615a044f3694",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-07-20T12:41:07.187Z",
+            "modified": "2023-07-24T12:52:57.354Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGJkNTE2OTUxNWE2MTVhMDQ0ZjM2OTQiLCJ1c2VybmFtZSI6Ik1hcmlhIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY5MDEyOTM3N30.LvAzivsKFwdmxyqSS1h1vpq82NIlmZTMLd81pEQcSqc"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "{{host}}/api/users"
+        },
+        "envId": "c73b12e5-1164-4d30-b7e2-d3c79b3a9aac"
+    }
+}

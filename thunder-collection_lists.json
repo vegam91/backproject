@@ -1,0 +1,104 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "lists",
+    "dateExported": "2023-07-24T18:04:37.923Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "dc214fa7-4b03-4237-b5a6-b26bbebbb7ee",
+            "colId": "e1f10cdc-68cb-4207-aa0b-4ab038d8bb4d",
+            "containerId": "",
+            "name": "createlist",
+            "url": "localhost:3000/api/lists",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-20T06:49:06.467Z",
+            "modified": "2023-07-24T17:54:55.056Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGJkNTE2OTUxNWE2MTVhMDQ0ZjM2OTQiLCJ1c2VybmFtZSI6Ik1hcmlhIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY5MDEzMTY0OH0._Ix0STuTA0Gnf6XfncWT16LkKz1Mdpf0Z6_Zxwj74eM "
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"listName\": \"lista34\",\n    \"public\": true\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1a754645-3941-4294-8f4b-a43130e644a3",
+            "colId": "e1f10cdc-68cb-4207-aa0b-4ab038d8bb4d",
+            "containerId": "",
+            "name": "añadir cancion ",
+            "url": "localhost:3000/api/lists/64bebaee677e6e0c39dafb12/song/64be17ad348ec742aa5cb555",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2023-07-20T06:49:08.226Z",
+            "modified": "2023-07-24T17:55:08.404Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGJkNWVmNDdjZDVlNTcyMGQ0NjQyOGEiLCJ1c2VybmFtZSI6IlNlcmdpbyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5MDE3ODg3OX0.8zeEKIavXlPoNA3aWSCqIIs6PZtM6Nh9z7jeUaeFKHw "
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "36f87094-1bac-4937-8d7e-fef7af075745",
+            "colId": "e1f10cdc-68cb-4207-aa0b-4ab038d8bb4d",
+            "containerId": "",
+            "name": "eliminarcancion ",
+            "url": "localhost:3000/api/lists/64be2000759454e71a075593/song/64be5104abdec202035f5d87",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-07-22T09:44:57.037Z",
+            "modified": "2023-07-24T10:32:43.897Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGJkNWVmNDdjZDVlNTcyMGQ0NjQyOGEiLCJ1c2VybmFtZSI6IlNlcmdpbyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5MDE5Mjk4Nn0.gUWxg1zgXReH7qz7u04MGW8kTHWGf4c57E0e7oVomw4 "
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7125a507-ebc3-41b0-b3a0-372817f9f17a",
+            "colId": "e1f10cdc-68cb-4207-aa0b-4ab038d8bb4d",
+            "containerId": "",
+            "name": "eliminarlista ",
+            "url": "localhost:3000/api/lists/64bd5e9d7cd5e5720d464287",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-07-22T16:35:12.802Z",
+            "modified": "2023-07-23T17:31:17.657Z",
+            "headers": [
+                {
+                    "name": "x-auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGJkNWVmNDdjZDVlNTcyMGQ0NjQyOGEiLCJ1c2VybmFtZSI6IlNlcmdpbyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5MDEzMjk4NX0.VFD6mEGXedTxHCHh7MRnHVHZ8kT9lEUbay7bq_mWdIg"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "558152f4-74c5-4e09-a188-699964bd6c15",
+            "colId": "e1f10cdc-68cb-4207-aa0b-4ab038d8bb4d",
+            "containerId": "",
+            "name": "getlists",
+            "url": "https://musciapp.onrender.com/api/lists",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-07-24T12:39:31.525Z",
+            "modified": "2023-07-24T12:47:08.800Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
