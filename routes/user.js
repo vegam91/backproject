@@ -18,7 +18,7 @@ const userValidationSchemaByBody = [
 ]
 
 const router = express.Router()
-console.log("hhh")
+
 router.post(
 	'/signup',
 	userValidationSchemaByBody,

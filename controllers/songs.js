@@ -47,9 +47,28 @@ const updateSong = async (req, res) => {
     }
   };
 
+  const getSongsByAuthor = async (req, res) => {
+    try {
+      const { author } = req.query;
+
+      const songsByAuthor = await Songs.find({ Author: author });
+  
+      if (songsByAuthor.length === 0) {
+        return res.status(404).json({ message: 'No se han encontrado canciones para este artista ' });
+      }
+  
+      res.json(songsByAuthor);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Error del servidor' });
+    }
+  };
+
 
 module.exports={
     addSong,
     updateSong,
-    deleteSong
+    deleteSong,
+    getSongsByAuthor
+
 }

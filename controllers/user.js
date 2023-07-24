@@ -2,7 +2,6 @@
 const bcrypt = require ('bcrypt')
 const User= require('../models/user')
 
-console.log("Jjjj")
 
 const register = async (req, res) =>{
     const {password: plainTextPassword, ...userDetails}= req.body

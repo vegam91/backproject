@@ -31,5 +31,6 @@ router.post('/', isAuth, isAdmin,ValidationSchemaByBody, validate, songControlle
 
 router.delete('/:id', isAuth, isAdmin, deleteValidationSchemaByParam, validate, songController.deleteSong);
 
+router.get('/', songController.getSongsByAuthor);
 
 module.exports= router
