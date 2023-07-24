@@ -20,8 +20,8 @@ const createList = async (req, res) => {
 
   const addSongToList = async (req, res) => {
     try {
-      const listId = req.param.listId;
-      const songId = req.param.songId;
+      const listId = req.params.listId;
+      const songId = req.params.songId;
       const list = await List.findByIdAndUpdate(listId, { $push: { songId: songId } }, { new: true });
       if (!list) {
         return res.status(404).json({ message: "Lista no encontrada" });

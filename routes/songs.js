@@ -27,9 +27,9 @@ const ValidationSchemaByParam = [
 		  ];
 router.put('/songs/:id', isAuth, isAdmin, ValidationSchemaByParam, ValidationSchemaByBody, validate, songController.updateSong);
 
-router.post('/songs', isAuth, isAdmin,ValidationSchemaByBody, validate, songController.addSong);
+router.post('/', isAuth, isAdmin,ValidationSchemaByBody, validate, songController.addSong);
 
-router.delete('/songs/:id', isAuth, isAdmin, deleteValidationSchemaByParam, validate, songController.deleteSong);
+router.delete('/:id', isAuth, isAdmin, deleteValidationSchemaByParam, validate, songController.deleteSong);
 
 
 module.exports= router

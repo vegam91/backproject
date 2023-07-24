@@ -4,7 +4,7 @@ const addSong = async (req,res)=>{
 
     try{
         const { songName, Author}=req.body;
-        const newSong = await Songs.create({songID,songName,Author});
+        const newSong = await Songs.create({songName,Author});
         res.status(201).json(newSong);
     }catch(error){
         console.error(error);
@@ -14,10 +14,10 @@ const addSong = async (req,res)=>{
 
 const updateSong = async (req, res) => {
     try {
-      const { id } = req.body;
-      const { title } = req.body;
+      const { id } = req.params;
+      const { songName } = req.body;
   
-      const updatedSong = await Songs.findByIdAndUpdate(id, { title }, { new: true });
+      const updatedSong = await Songs.findByIdAndUpdate(id, { songName }, { new: true });
   
       if (!updatedSong) {
         return res.status(404).json({ message: 'Canción no encontrada' });
