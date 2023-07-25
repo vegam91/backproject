@@ -1,0 +1,12 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "music-production",
+    "dateExported": "2023-07-25T06:02:32.916Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "host",
+            "value": "https://musciapp.onrender.com"
+        }
+    ]
+}
